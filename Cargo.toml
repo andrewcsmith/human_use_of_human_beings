@@ -1,0 +1,8 @@
+[package]
+name = "human_use_of_human_beings"
+version = "0.1.0"
+authors = ["Andrew C. Smith <andrewchristophersmith@gmail.com>"]
+
+[dependencies]
+voting_experts = { path = "../voting_experts" }
+radix_trie = { git = "https://github.com/michaelsproul/rust_radix_trie" }
