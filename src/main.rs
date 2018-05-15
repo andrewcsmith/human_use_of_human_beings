@@ -198,9 +198,9 @@ fn go() -> Result<(), Box<Error>> {
 
     for (i, paragraph) in s.split('\n').enumerate() {
         let paragraph = paragraph.to_lowercase();
-        let voting_window_size = 9;
+        let voting_window_size = 10;
         let silence_window_size = 3;
-        let threshold = (8 - i);
+        let threshold = 9 - i;
         let votes = cast_votes_with_trie(&paragraph, voting_window_size, &trie, &stats);
         println!("");
         let silenced = bring_silence(&paragraph, &votes, silence_window_size, threshold).iter()
